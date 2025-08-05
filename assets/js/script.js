@@ -1,3 +1,5 @@
+AOS.init();
+
 am5.ready(function () {
     // Create root
     var root = am5.Root.new("hourlyForecastChart");
