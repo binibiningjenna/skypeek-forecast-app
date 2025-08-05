@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+:root {
+  --primaryFont: "Poppins", sans-serif;
+  --primaryColor: #202c3c;
+  --secondaryColor: #769bb012;
+  --bgColor: #0b111d;
+  --lightColor: #f2efeb;
+}
+
+body {
+  font-family: var(--primaryFont);
+  font-size: 0.9rem;
+  color: var(--lightColor);
+  background-color: var(--bgColor);
+}
+
+.form-control:focus {
+  border-color: var(--lightColor);
+  border-width: 2px;
+  box-shadow: none !important;
+}
+
+.btn-outline-light {
+  --bs-btn-hover-bg: var(--primaryColor);
+  --bs-btn-hover-color: var(--lightColor);
+  --bs-btn-active-bg: var(--primaryColor);
+  --bs-btn-active-color: var(--lightColor);
+}
+
+.card {
+  background-color: var(--primaryColor);
+  border-radius: 10px;
+  color: var(--lightColor);
+}
+
+.small-card {
+  background-color: var(--secondaryColor);
+  border-radius: 10px;
+  color: var(--lightColor);
+}
+
+.search-wrapper {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .search-wrapper {
+    width: 50%;
+  }
+}
