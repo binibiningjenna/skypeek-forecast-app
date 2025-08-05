@@ -41,12 +41,8 @@ body {
   color: var(--lightColor);
 }
 
-.search-wrapper {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .search-wrapper {
-    width: 50%;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body{
+    font-size: 0.8rem;
   }
 }

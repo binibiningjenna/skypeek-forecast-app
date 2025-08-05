@@ -34,7 +34,7 @@ am5.ready(function () {
         am5xy.CategoryAxis.new(root, {
             categoryField: "hour",
             renderer: am5xy.AxisRendererX.new(root, {
-                minGridDistance: 20,
+                minGridDistance: 40,
                 strokeOpacity: 0.2
             }),
             tooltip: am5.Tooltip.new(root, {})
