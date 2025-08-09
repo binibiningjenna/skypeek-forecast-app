@@ -6,6 +6,7 @@
   --primaryColor: #202c3c;
   --secondaryColor: #769bb012;
   --bgColor: #0b111d;
+  --loader: #01fbfb;
   --lightColor: #f2efeb;
 }
 
@@ -29,7 +30,7 @@ body {
   --bs-btn-active-color: var(--lightColor);
 }
 
-.card {
+.card, .small-card {
   background-color: var(--primaryColor);
   border-radius: 10px;
   color: var(--lightColor);
@@ -37,12 +38,54 @@ body {
 
 .small-card {
   background-color: var(--secondaryColor);
-  border-radius: 10px;
-  color: var(--lightColor);
+  transition: transform 0.1s ease;
+}
+
+.small-card:hover {
+  background-color: var(--bgColor);
+}
+
+.loader-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px;
+  height: 240px;
+}
+
+.loader-ring-light {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 inset var(--loader);
+  animation: rotate-360 2s linear infinite;
+}
+
+.loader-ring-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3) inset;
+}
+
+@keyframes rotate-360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  body{
+  body {
     font-size: 0.8rem;
+  }
+  .h5 {
+    font-size: 1rem;
   }
 }
